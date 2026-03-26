@@ -6,21 +6,31 @@ class Nodo {
     public Nodo(int dato) {
         this.dato = dato;
         this.siguiente = null;
+    }
 }
+class ListaEnlazada {
+    Nodo cabeza;
+
+    public void insertar(int dato) {
+        Nodo nuevo = new Nodo(dato);
+
+        if (cabeza == null) {
+            cabeza = nuevo;
+        } else {
+            Nodo temp = cabeza;
+            while (temp.siguiente != null) {
+                temp = temp.siguiente;
+            }
+            temp.siguiente = nuevo;
+        }
+    }
 public class Taller21260326 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         int n = sc. nextInt();
-        
-         Nodo cabeza = null;
-         Nodo actual = null;
-         
-          for (int i = 0; i < n - 1; i++) {
-            int valor = sc.nextInt();
-            Nodo nuevo = new Nodo(valor); 
-            cabeza = nuevo;
+       
         
         
     }
