@@ -24,6 +24,18 @@ class ListaEnlazada {
             temp.siguiente = nuevo;
         }
     }
+   public boolean buscar(int valor) {
+    Nodo temp = cabeza;
+
+    while (temp != null) {
+        if (temp.dato = valor) {
+            return true;
+        }
+        temp = temp.siguiente;
+    }
+
+    return false;
+}
 public class Taller21260326 {
 
     public static void main(String[] args) {
@@ -35,3 +47,4 @@ public class Taller21260326 {
         
     }
 }
+
