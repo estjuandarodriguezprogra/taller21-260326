@@ -46,10 +46,13 @@ public class Taller21260326 {
         for (int i = 0; i < n - 1; i++) {
             lista.insertar(sc.nextInt());
         }
+        for (int i = 1; i <= n; i++) {
+            if (!lista.buscar(i)) {
+                System.out.println(i);
+                break;
+            }
+        }
+    }       
 }
-
-        
-        
-    }
 }
 
