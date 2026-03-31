@@ -1,4 +1,4 @@
-import java.until.Scanner;
+import java.util.Scanner;
 
 class Nodo {
     int dato;
@@ -42,7 +42,12 @@ public class Taller21260326 {
         Scanner sc = new Scanner(System.in);
         
         int n = sc. nextInt();
-       
+        ListaEnlazada lista = new ListaEnlazada();
+        for (int i = 0; i < n - 1; i++) {
+            lista.insertar(sc.nextInt());
+        }
+}
+
         
         
     }
