@@ -28,7 +28,7 @@ class ListaEnlazada {
     Nodo temp = cabeza;
 
     while (temp != null) {
-        if (temp.dato = valor) {
+        if (temp.dato == valor) {
             return true;
         }
         temp = temp.siguiente;
