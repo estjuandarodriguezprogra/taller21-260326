@@ -40,41 +40,32 @@ class ListaEnlazada {
 public class Taller21260326 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        int n = sc. nextInt();
-        ListaEnlazada lista = new ListaEnlazada();
-        for (int i = 0; i < n - 1; i++) {
-            lista.insertar(sc.nextInt());
-        }
-        for (int i = 1; i <= n; i++) {
-            if (!lista.buscar(i)) {
-                System.out.println(i);
-                break;
-            }
-        }
-    }       
-}
-}
-public class Taller21260326 {
+    java.util.Scanner sc = new java.util.Scanner(System.in);
 
-    public static void main(String[] args) {
-        java.util.Scanner sc = new java.util.Scanner(System.in);
+    System.out.println("BUSCAR NUMERO FALTANTE");
 
-        int n = sc.nextInt();
+    System.out.print("Ingrese el valor de n: ");
+    int n = sc.nextInt();
 
-        ListaEnlazada lista = new ListaEnlazada();
+    ListaEnlazada lista = new ListaEnlazada();
 
-        for (int i = 0; i < n - 1; i++) {
-            lista.insertar(sc.nextInt());
-        }
+    System.out.println("Ingrese " + (n - 1) + " numeros entre 1 y " + n + ":");
 
-        for (int i = 1; i <= n; i++) {
-            if (!lista.buscar(i)) {
-                System.out.println(i);
-                break;
-            }
+    for (int i = 0; i < n - 1; i++) {
+        System.out.print("Numero " + (i + 1) + ": ");
+        lista.insertar(sc.nextInt());
+    }
+
+    int faltante = 0;
+
+    for (int i = 1; i <= n; i++) {
+        if (!lista.buscar(i)) {
+            faltante = i;
+            break;
         }
     }
-}
 
+    System.out.println("\nEl numero faltante es: " + faltante);
+}
+}
+}
