@@ -1,0 +1,41 @@
+
+public class ListaEnlazada {
+    class Nodo {
+    int dato;
+    Nodo siguiente;
+    public Nodo(int dato) {
+        this.dato = dato;
+        this.siguiente = null;
+    }
+    Nodo cabeza;
+
+    public void insertar(int dato) {
+        Nodo nuevo = new Nodo(dato);
+
+        if (cabeza == null) {
+            cabeza = nuevo;
+        } else {
+            Nodo temp = cabeza;
+            while (temp.siguiente != null) {
+                temp = temp.siguiente;
+            }
+            temp.siguiente = nuevo;
+        }
+    }
+   public boolean buscar(int valor) {
+    Nodo temp = cabeza;
+
+    while (temp != null) {
+        if (temp.dato == valor) {
+            return true;
+        }
+        temp = temp.siguiente;
+    }
+
+    return false;
+}
+}
+}
+
+    
+
