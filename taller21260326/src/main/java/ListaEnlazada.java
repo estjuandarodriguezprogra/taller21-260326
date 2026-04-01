@@ -1,17 +1,21 @@
-
 public class ListaEnlazada {
+
+    
     class Nodo {
-    int dato;
-    Nodo siguiente;
-    public Nodo(int dato) {
-        this.dato = dato;
-        this.siguiente = null;
-    }
+        int dato;
+        Nodo siguiente;
+
+        public Nodo(int dato) {
+            this.dato = dato;
+            this.siguiente = null;
+        }
+    } 
+
     Nodo cabeza;
+
 
     public void insertar(int dato) {
         Nodo nuevo = new Nodo(dato);
-
         if (cabeza == null) {
             cabeza = nuevo;
         } else {
@@ -22,20 +26,18 @@ public class ListaEnlazada {
             temp.siguiente = nuevo;
         }
     }
-   public boolean buscar(int valor) {
-    Nodo temp = cabeza;
 
-    while (temp != null) {
-        if (temp.dato == valor) {
-            return true;
+    
+    public boolean buscar(int valor) {
+        Nodo temp = cabeza;
+        while (temp != null) {
+            if (temp.dato == valor) {
+                return true;
+            }
+            temp = temp.siguiente;
         }
-        temp = temp.siguiente;
+        return false;
     }
-
-    return false;
-}
-}
-}
-
+} 
     
 
